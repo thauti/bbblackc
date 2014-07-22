@@ -23,7 +23,7 @@ You must have access to /sys/class folder when you execute your program.
 
 #### GPIO
 
-Before that you can use your GPIO you need initialize it.
+Before you can use your GPIO you need to initialize it.
 
 	int gpio_init(int GPIO, char* direction);
 
