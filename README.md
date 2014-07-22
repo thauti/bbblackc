@@ -6,7 +6,7 @@ For now, it only support GPIOs, but it will soon support the PWM, SPI, UART ....
 
 ### Instructions
 
-If you want to use BBlackC, you just need to add his path into your compiling command.
+If you want to use BBlackC, you just need to add its path into your compiling command.
 
 Typically:
 ```
@@ -27,7 +27,7 @@ Before that you can use your GPIO you need initialize it.
 
 	int gpio_init(int GPIO, char* direction);
 
-**GPIO** : Your GPIO in the "P0_00" format, you can also use his ID.  
+**GPIO** : Your GPIO in the "P0_00" format, you can also use its ID.  
 **direction** : OUT/IN
 
 **Example**
@@ -40,7 +40,7 @@ After that, you can pull-up and pull-down it with
 ```
 int gpio_set(int GPIO, int value);
 ```
-**GPIO** : Your GPIO in the "P0_00" format, you can also use his ID.  
+**GPIO** : Your GPIO in the "P0_00" format, you can also use its ID.  
 **value** : HIGH/LOW or 1/0 as you want.
 
 **Example**
@@ -51,9 +51,9 @@ gpio_set(P8_14, HIGH);
 At the end of your program, you need to cleanup your GPIO.
 
 ```
-int gpio_clean(GPIO);
+int gpio_unset(GPIO);
 ```
-**GPIO** : Your GPIO in the "P0_00" format, you can also use his ID.  
+**GPIO** : Your GPIO in the "P0_00" format, you can also use its ID.  
 
 ### Example
 ##### Blinking LED
@@ -73,7 +73,7 @@ int main()
 		gpio_set(P8_16, HIGH);
 		sleep(1);	
 	}
-	gpio_clean(P8_16);
+	gpio_unset(P8_16);
 	return 0;
 }
 ```
