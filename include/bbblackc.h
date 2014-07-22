@@ -79,5 +79,5 @@
 #define P9_42B 114
 
 int gpio_init(int GPIO, char* direction);
-int gpio_clean(int GPIO);
+int gpio_unset(int GPIO);
 int gpio_set(int GPIO, int value);

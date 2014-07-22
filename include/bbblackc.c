@@ -39,7 +39,7 @@ int gpio_init(int GPIO, char* direction)
 	fclose(direction_f);
 	return 0;
 }
-int gpio_clean(int GPIO)
+int gpio_unset(int GPIO)
 {
 	FILE* gpio = NULL;
 	gpio = fopen("/sys/class/gpio/unexport", "w");
