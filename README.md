@@ -1,3 +1,5 @@
+# Deprecated
+
 ## BBBlackC
 
 BBBlackC is a C library for easy access to the Beaglebone Black GPIOs.
